@@ -1,0 +1,3 @@
+build/
+*.jar
+webapp/WEB-INF/lib/*
