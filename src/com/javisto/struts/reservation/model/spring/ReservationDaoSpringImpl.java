@@ -41,8 +41,7 @@ public class ReservationDaoSpringImpl extends NamedParameterJdbcTemplate impleme
             @Override
             public Appointment mapRow(ResultSet rs, int num) throws SQLException
             {
-                Appointment appointment = new Appointment(rs.getInt("id"), rs.getDate("time"), rs.getInt("doctor_id"));
-                return appointment;
+                return new Appointment(rs.getInt("id"), rs.getDate("time"), rs.getInt("doctor_id"));
             }
         });
 
